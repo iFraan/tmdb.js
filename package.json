@@ -1,6 +1,6 @@
 {
   "name": "@ifraan_/tmdb.js",
-  "version": "1.0.0",
+  "version": "1.0.01",
   "description": "Wrapper for TMDB API.",
   "main": "index.js",
   "scripts": {
