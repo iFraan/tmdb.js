@@ -35,7 +35,7 @@ const api = new API(key, lang)
 
 Example code:
 ```js
-const { API } = require('tmdb.js');
+const { API } = require('@ifraan_/tmdb.js');
 const client = new API('your-key', 'es')
 	try {
 		const search = await client.search('from the Loop')
