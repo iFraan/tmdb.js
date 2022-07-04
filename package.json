@@ -1,0 +1,32 @@
+{
+  "name": "tmdb.js",
+  "version": "1.0.12",
+  "description": "Wrapper for CSGO stats.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iFraan/tmdb.js.git"
+  },
+  "keywords": [
+    "movie-api",
+    "movie",
+    "serie",
+    "tv-show",
+    "tmdb.js",
+    "show",
+    "tmdb",
+    "wrapper"
+  ],
+  "author": "ifraan_",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/iFraan/tmdb.js/issues"
+  },
+  "homepage": "https://github.com/iFraan/tmdb.js#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
