@@ -98,61 +98,61 @@ try {
             	still_path: '/h9ruc4rXCJEbgFxHAou7PtMG8iX.jpg',
             	vote_average: 8.1,
             	vote_count: 8
-        	},
-        	name: 'Historias del bucle',
-        	next_episode_to_air: null,
-        	networks: [
-        	    {
-        	      id: 1024,
-        	      name: 'Amazon',
-        	      logo_path: '/ifhbNuuVnlwYy5oXA5VIb2YR8AZ.png',
-        	      origin_country: ''
-        	    }
-        	],
-        	number_of_episodes: 8,
-        	number_of_seasons: 1,
-        	origin_country: [ 'US' ],
-        	original_language: 'en',
-        	original_name: 'Tales from the Loop',
-        	overview: 'Tales from the Loop explora la fantástica y misteriosa ciudad y las personas 	que viven por encima de ‘The Loop’, una máquina construida para desbloquear y explorar los 	misterios del universo, haciendo posible cosas que anteriormente solo estaban relegadas a 	la ciencia ficción. Basada en la obra de Simon Stålenhag.',
-        	popularity: 12.117,
-        	poster_path: '/56D0QFyLhrRp1ZTBz8Gw10qtZas.jpg',
-        	production_companies: [
-        	    {
-        	      id: 101405,
-        	      logo_path: null,
-        	      name: '6th & Idaho',
-        	      origin_country: 'US'
-        	    },
-        	    ...
-        	],
-        	production_countries: [ { iso_3166_1: 'US', name: 'United States of America' } ],
-        	seasons: [
-        	    {
-        	      air_date: '2020-03-11',
-        	      episode_count: 1,
-        	      id: 180625,
-        	      name: 'Especiales',
-        	      overview: '',
-        	      poster_path: null,
-        	      season_number: 0
-        	    },
-        	    {
-        	      air_date: '2020-04-03',
-        	      episode_count: 8,
-        	      id: 132915,
-        	      name: 'Temporada 1',
-        	      overview: '',
-        	      poster_path: '/moNfJvC7Ivr5I8eqSYrSLcs9Ukx.jpg',
-        	      season_number: 1
-        	    }
-        	],
-        	spoken_languages: [ { english_name: 'English', iso_639_1: 'en', name: 'English' } ],
-        	status: 'Ended',
-        	tagline: '',
-        	type: 'Scripted',
-        	vote_average: 7,
-        	vote_count: 251
+			},
+			name: 'Historias del bucle',
+			next_episode_to_air: null,
+			networks: [
+			    {
+			      id: 1024,
+			      name: 'Amazon',
+			      logo_path: '/ifhbNuuVnlwYy5oXA5VIb2YR8AZ.png',
+			      origin_country: ''
+			    }
+			],
+			number_of_episodes: 8,
+			number_of_seasons: 1,
+			origin_country: [ 'US' ],
+			original_language: 'en',
+			original_name: 'Tales from the Loop',
+			overview: 'Tales from the Loop explora la fantástica y misteriosa ciudad y l			personas 	que viven por encima de ‘The Loop’, una máquina construida pa			desbloquear y explorar los 	misterios del universo, haciendo posible cosas q			anteriormente solo estaban relegadas a 	la ciencia ficción. Basada en la obra 			Simon Stålenhag.',
+			popularity: 12.117,
+			poster_path: '/56D0QFyLhrRp1ZTBz8Gw10qtZas.jpg',
+			production_companies: [
+			    {
+			      id: 101405,
+			      logo_path: null,
+			      name: '6th & Idaho',
+			      origin_country: 'US'
+			    },
+			    ...
+			],
+			production_countries: [ { iso_3166_1: 'US', name: 'United States of America' } ],
+			seasons: [
+			    {
+			      air_date: '2020-03-11',
+			      episode_count: 1,
+			      id: 180625,
+			      name: 'Especiales',
+			      overview: '',
+			      poster_path: null,
+			      season_number: 0
+			    },
+			    {
+			      air_date: '2020-04-03',
+			      episode_count: 8,
+			      id: 132915,
+			      name: 'Temporada 1',
+			      overview: '',
+			      poster_path: '/moNfJvC7Ivr5I8eqSYrSLcs9Ukx.jpg',
+			      season_number: 1
+			    }
+			],
+			spoken_languages: [ { english_name: 'English', iso_639_1: 'en', name: 'English' } ],
+			status: 'Ended',
+			tagline: '',
+			type: 'Scripted',
+			vote_average: 7,
+			vote_count: 251
         }
         */
     } catch (e) {
