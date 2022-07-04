@@ -114,7 +114,7 @@ const client = new API('your-key', 'es')
 			origin_country: [ 'US' ],
 			original_language: 'en',
 			original_name: 'Tales from the Loop',
-			overview: 'Tales from the Loop explora la fantástica y misteriosa ciudad y 				personas 	que viven por encima de ‘The Loop’, una máquina construida p				desbloquear y explorar los 	misterios del universo, haciendo posible cosas					anteriormente solo estaban relegadas a 	la ciencia ficción. Basada en la ob						Simon Stålenhag.',
+			overview: 'Tales from the Loop explora la fantástica y misteriosa ciudad y personas que viven por encima de ‘The Loop’, una máquina construida para desbloquear y explorar los 	misterios del universo, haciendo posible cosas anteriormente solo estaban relegadas a la ciencia ficción. Basada en la obra de Simon Stålenhag.',
 			popularity: 12.117,
 			poster_path: '/56D0QFyLhrRp1ZTBz8Gw10qtZas.jpg',
 			production_companies: [
