@@ -20,7 +20,7 @@ npm i tmdb.js
 ```
 To use this wrapper you first need to initialize the class API
 ```js
-const { API } = require('tmdb.js')
+const { API } = require('@ifraan_/tmdb.js')
 const key = 'your-key-from-tmdb';
 const lang = 'es' // OPTIONAL -> Pass a ISO 639-1 value (en for deafult)
 const api = new API(key, lang)
