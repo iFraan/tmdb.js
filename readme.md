@@ -38,9 +38,9 @@ const api = new API(key, lang)
 Example code:
 ```js
 const { API } = require('@ifraan_/tmdb.js');
-const client = new API('your-key', 'es')
+const api = new API('your-key', 'es')
 	try {
-		const search = await client.search('from the Loop')
+		const search = await api.search('from the Loop')
 		const r = search.results[0]
 		console.log('First Result: ', r)
 		/*
@@ -61,7 +61,7 @@ const client = new API('your-key', 'es')
 			vote_count: 251
 		}
 		*/
-		const details = await client[r.media_type](r.id)
+		const details = await api[r.media_type](r.id)
 		console.log('Details: ', details)
 		/* 
 		Details:  {
