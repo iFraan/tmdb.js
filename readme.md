@@ -28,10 +28,12 @@ const api = new API(key, lang)
 
 | Methods | Description |
 | - | - |
-| search | Search for Movies and TV-Shows |
-| tv | Details for TV-Shows |
-| movies | Details for Movies |
-| raw | Gives every response got so far, so you can re-use the existing data |
+| search | Search for Movies and TV-Shows | 
+| tv | Details for TV Shows |
+| movie | Details for Movies |
+| similar | Similar entries for movies/tv |
+| providers | Details for Movies |
+| raw | Returns every response got so far, so you can re-use the existing data |
 
 Example code:
 ```js
@@ -153,6 +155,50 @@ const client = new API('your-key', 'es')
 			type: 'Scripted',
 			vote_average: 7,
 			vote_count: 251
+		}
+		*/
+		const similar = await api.similar(r.media_type, r.id)
+        console.log('Similar: ', similar.results[0])
+		/* 
+		Similar:  {
+			adult: false,
+			backdrop_path: '/tY6ZweSX4Mg8AYNSia9vyH1su8k.jpg',
+			genre_ids: [ 16, 10765 ],
+			id: 1095,
+			name: 'Ghost in the Shell: Stand Alone Complex',
+			origin_country: [ 'JP' ],
+			original_language: 'ja',
+			original_name: '攻殻機動隊 STAND ALONE COMPLEX',
+			overview: "En un futuro no muy lejano, el mundo se encuentra totalmente computerizado. Seres humanos con interfaces y cerebros artificiales se funden con máquinas alcanzando un nuevo nivel de existencia entre el mundo			físico y la red digital. Para combatir los crímenes relacionados con las nuevas tecnologías ha sido creada una fuerza de choque antiterrorista con individuos 'mejorados' capaces de perseguir toda clase de criminales tanto			en el mundo real como en el virtual. La Teniente cyborg Motoko Kusanagi y sus compañeros de la Sección 9 deben resolver una delicada crisis de rehenes, detener un tanque de asalto de última generación fuera de control y			determinar la causa de los misteriosos suicidios de una serie de robots obsoletos. Todo ello antes de afrontar el desafío sin precedentes del esquivo pirata informático conocido como el 'Hombre que ríe'.",
+			popularity: 24.517,
+			poster_path: '/1Ix4kRPwWjM9wcrvWA25lXi781J.jpg',
+			first_air_date: '2002-10-01',
+			vote_average: 8.229,
+			vote_count: 264
+		}
+		*/
+        const providers = await api.providers(r.media_type, r.id)
+        console.log('Providers: ', providers.results['US']) // Country Code
+		/* 
+		Providers:  {
+			link: 'https://www.themoviedb.org/tv/1411-person-of-interest/watch?locale=US',
+			flatrate: [
+			  {
+			    display_priority: 8,
+			    logo_path: '/Ajqyt5aNxNGjmF9uOfxArGrdf3X.jpg',
+			    provider_id: 384,
+			    provider_name: 'HBO Max'
+			  }
+			],
+			buy: [
+			  {
+			    display_priority: 2,
+			    logo_path: '/peURlLlr8jggOwK53fJ5wdQl05y.jpg',
+			    provider_id: 2,
+			    provider_name: 'Apple iTunes'
+			  },
+			  ...
+			]
 		}
 		*/
 	} catch (e) {
