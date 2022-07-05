@@ -31,7 +31,9 @@ class API {
         this._raw = {
             movies: [],
             tv: [],
-            search: []
+            search: [],
+            similar: [],
+            providers: []
         }
     }
 
@@ -88,6 +90,46 @@ class API {
         }
         return this._raw.movies[this._raw.movies.length - 1];
     }
+
+    /**
+     * Gets similar entries by tv/movie id
+     * @param {string} type movie / tv
+     * @param {string} id movie /tv id
+     * @returns Similar entries
+     */
+     async similar(type, id){
+        console.log(type)
+        if (!(['movie', 'tv'].includes(type))) throw new Error('type can only be "movie" or "tv"');
+        try {
+            this._raw.similar.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', `/${type}/${id}/similar`)));
+        } catch (e) {
+            // console.log(e)
+            if (e.status_message) throw new Error(e.status_message);
+            throw new Error(e.message);
+        }
+        return this._raw.similar[this._raw.similar.length - 1];
+    }
+
+    /**
+     * Gets providers by tv/movie id
+     * @param {string} type movie / tv
+     * @param {string} id movie /tv id
+     * @returns Providers
+     */
+     async providers(type, id){
+        console.log(type)
+        if (!(['movie', 'tv'].includes(type))) throw new Error('type can only be "movie" or "tv"');
+        try {
+            this._raw.providers.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', `/${type}/${id}/watch/providers`)));
+        } catch (e) {
+            // console.log(e)
+            if (e.status_message) throw new Error(e.status_message);
+            throw new Error(e.message);
+        }
+        return this._raw.providers[this._raw.similar.length - 1];
+    }
+
+
     
 
     get raw() { return this._raw; }
