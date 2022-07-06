@@ -16,7 +16,7 @@ axios
 
 To install use:
 ```shell
-npm i tmdb.js
+npm i @ifraan_/tmdb.js
 ```
 To use this wrapper you first need to initialize the class API
 ```js

@@ -54,7 +54,6 @@ class API {
                 this._raw.search[this._raw.search.length - 1].results[i]['poster_path']      = IMAGE_URL + item['poster_path']
             }
         } catch (e) {
-            // console.log(e)
             if (e.status_message) throw new Error(e.status_message);
             throw new Error(e.message);
         }
@@ -69,7 +68,6 @@ class API {
         try {
             this._raw.tv = await fetch(url.replace('{lang}', this.language).replace('{endpoint}', '/tv/' + query));
         } catch (e) {
-            // console.log(e)
             if (e.status_message) throw new Error(e.status_message);
             throw new Error(e.message);
         }
@@ -84,7 +82,6 @@ class API {
         try {
             this._raw.movies.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', '/movie/' + query)));
         } catch (e) {
-            // console.log(e)
             if (e.status_message) throw new Error(e.status_message);
             throw new Error(e.message);
         }
@@ -98,12 +95,10 @@ class API {
      * @returns Similar entries
      */
      async similar(type, id){
-        console.log(type)
         if (!(['movie', 'tv'].includes(type))) throw new Error('type can only be "movie" or "tv"');
         try {
             this._raw.similar.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', `/${type}/${id}/similar`)));
         } catch (e) {
-            // console.log(e)
             if (e.status_message) throw new Error(e.status_message);
             throw new Error(e.message);
         }
@@ -117,12 +112,10 @@ class API {
      * @returns Providers
      */
      async providers(type, id){
-        console.log(type)
         if (!(['movie', 'tv'].includes(type))) throw new Error('type can only be "movie" or "tv"');
         try {
             this._raw.providers.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', `/${type}/${id}/watch/providers`)));
         } catch (e) {
-            // console.log(e)
             if (e.status_message) throw new Error(e.status_message);
             throw new Error(e.message);
         }
