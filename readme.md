@@ -1,8 +1,9 @@
 <div align="center">
 	<h1>tmdb.js</h1>
-   <a href="https://www.npmjs.com/package/@ifraan_/tmdb.js"><img src="https://badgen.net/npm/v/@ifraan_/tmdb.js?color=red" alt="NPM-Version"/></a>
-   <a href="https://www.npmjs.com/package/@ifraan_/tmdb.js"><img src="https://badgen.net/npm/dt/@ifraan_/tmdb.js?color=red" alt="NPM-Downloads"/></a>
-   <a href="https://github.com/iFraan/tmdb.js"><img src="https://badgen.net/github/stars/iFraan/tmdb.js?color=green" alt="Github Stars"/></a>
+   <a href="https://www.codefactor.io/repository/github/ifraan/tmdb.js"><img src="https://www.codefactor.io/repository/github/ifraan/tmdb.js/badge" alt="CodeFactor"/></a>
+   <a href="https://www.npmjs.com/package/@ifraan_/tmdb.js"><img src="https://badgen.net/npm/v/@ifraan_/tmdb.js?color=blue" alt="NPM-Version"/></a>
+   <a href="https://www.npmjs.com/package/@ifraan_/tmdb.js"><img src="https://badgen.net/npm/dt/@ifraan_/tmdb.js?color=blue" alt="NPM-Downloads"/></a>
+   <a href="https://github.com/iFraan/tmdb.js"><img src="https://badgen.net/github/stars/iFraan/tmdb.js?color=yellow" alt="Github Stars"/></a>
    <a href="https://github.com/iFraan/tmdb.js/issues"><img src="https://badgen.net/github/issues/iFraan/tmdb.js?color=green" alt="Issues"/></a>
    <h2>This a wrapper of TheMovieDB Public API</h2>
 </div>
