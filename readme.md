@@ -33,7 +33,7 @@ const api = new API(key, lang)
 | tv | Details for TV Shows |
 | movie | Details for Movies |
 | similar | Similar entries for movies/tv |
-| providers | Details for Movies |
+| providers | Where to watch the entries |
 | raw | Returns every response got so far, so you can re-use the existing data |
 
 Example code:
@@ -159,7 +159,7 @@ const api = new API('your-key', 'es')
 		}
 		*/
 		const similar = await api.similar(r.media_type, r.id)
-        console.log('Similar: ', similar.results[0])
+		console.log('Similar: ', similar.results[0])
 		/* 
 		Similar:  {
 			adult: false,
@@ -178,8 +178,8 @@ const api = new API('your-key', 'es')
 			vote_count: 264
 		}
 		*/
-        const providers = await api.providers(r.media_type, r.id)
-        console.log('Providers: ', providers.results['US']) // Country Code
+		const providers = await api.providers(r.media_type, r.id)
+		console.log('Providers: ', providers.results['US']) // Country Code
 		/* 
 		Providers:  {
 			link: 'https://www.themoviedb.org/tv/1411-person-of-interest/watch?locale=US',
