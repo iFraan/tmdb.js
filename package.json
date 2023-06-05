@@ -1,6 +1,6 @@
 {
   "name": "@ifraan_/tmdb.js",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Wrapper for TMDB API.",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/iFraan/tmdb.js#readme",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^1.4.0"
   }
 }

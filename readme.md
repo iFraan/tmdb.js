@@ -5,11 +5,13 @@
    <a href="https://www.npmjs.com/package/@ifraan_/tmdb.js"><img src="https://badgen.net/npm/dt/@ifraan_/tmdb.js?color=blue" alt="NPM-Downloads"/></a>
    <a href="https://github.com/iFraan/tmdb.js"><img src="https://badgen.net/github/stars/iFraan/tmdb.js?color=yellow" alt="Github Stars"/></a>
    <a href="https://github.com/iFraan/tmdb.js/issues"><img src="https://badgen.net/github/issues/iFraan/tmdb.js?color=green" alt="Issues"/></a>
-   <h2>This a wrapper of TheMovieDB Public V3 API</h2>
+   <h2>This a wrapper of TheMovieDB Public API</h2>
 </div>
 
 ## Instalattion
 You gotta request a Free API key on [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
+
+> You can use both v3 and v4 keys
 ### Dependencies
 ``
 axios
