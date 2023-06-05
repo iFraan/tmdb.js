@@ -11,9 +11,9 @@ const fetch = (url) => new Promise((resolve, reject) => {
     axios.get(url, { headers }).then(res => {
         resolve(res.data)
     })
-    .catch(err => {
-        reject(err.response.data)
-    })
+        .catch(err => {
+            reject(err.response.data)
+        })
 
 })
 
@@ -25,7 +25,7 @@ class API {
      * @param {string} apiKey 
      * @private // idk if it does something outside of typescript, but there it is
      */
-    constructor (apiKey, language = 'en'){
+    constructor(apiKey, language = 'en') {
         this.language = language;
         headers['Authorization'] = 'Bearer ' + apiKey;
         this._raw = {
@@ -42,7 +42,7 @@ class API {
      * @param {string} query 
      * @returns Results for the search
      */
-     async search(query){
+    async search(query) {
         try {
             this._raw.search.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', '/search/multi') + `&query=${query}`));
             if (!this._raw.search[this._raw.search.length - 1].results.length > 0) throw new Error(`Did not find any results for [${query}]`);
@@ -50,8 +50,8 @@ class API {
             const res = this._raw.search[this._raw.search.length - 1].results;
             for (let i = 0; i < res.length; i++) {
                 const item = res[i];
-                this._raw.search[this._raw.search.length - 1].results[i]['backdrop_path']    = IMAGE_URL + item['backdrop_path']
-                this._raw.search[this._raw.search.length - 1].results[i]['poster_path']      = IMAGE_URL + item['poster_path']
+                this._raw.search[this._raw.search.length - 1].results[i]['backdrop_path'] = IMAGE_URL + item['backdrop_path']
+                this._raw.search[this._raw.search.length - 1].results[i]['poster_path'] = IMAGE_URL + item['poster_path']
             }
         } catch (e) {
             if (e.status_message) throw new Error(e.status_message);
@@ -64,7 +64,7 @@ class API {
      * @param {string} query 
      * @returns Show details
      */
-     async tv(query){
+    async tv(query) {
         try {
             this._raw.tv = await fetch(url.replace('{lang}', this.language).replace('{endpoint}', '/tv/' + query));
         } catch (e) {
@@ -78,7 +78,7 @@ class API {
      * @param {string} query 
      * @returns Show details
      */
-     async movie(query){
+    async movie(query) {
         try {
             this._raw.movies.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', '/movie/' + query)));
         } catch (e) {
@@ -94,7 +94,7 @@ class API {
      * @param {string} id movie /tv id
      * @returns Similar entries
      */
-     async similar(type, id){
+    async similar(type, id) {
         if (!(['movie', 'tv'].includes(type))) throw new Error('type can only be "movie" or "tv"');
         try {
             this._raw.similar.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', `/${type}/${id}/similar`)));
@@ -111,7 +111,7 @@ class API {
      * @param {string} id movie /tv id
      * @returns Providers
      */
-     async providers(type, id){
+    async providers(type, id) {
         if (!(['movie', 'tv'].includes(type))) throw new Error('type can only be "movie" or "tv"');
         try {
             this._raw.providers.push(await fetch(url.replace('{lang}', this.language).replace('{endpoint}', `/${type}/${id}/watch/providers`)));
@@ -123,12 +123,12 @@ class API {
     }
 
 
-    
+
 
     get raw() { return this._raw; }
 }
 
-const GENRES = 
+const GENRES =
 {
     '12': 'Adventure',
     '14': 'Fantasy',
